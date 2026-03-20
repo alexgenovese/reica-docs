@@ -1,0 +1,77 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* ── Reica Brand Tokens ──────────────────────────────────────── */
+:root {
+  --ifm-color-primary: #DA7756;
+  --ifm-color-primary-dark: #cf6540;
+  --ifm-color-primary-darker: #c45a32;
+  --ifm-color-primary-darkest: #a34826;
+  --ifm-color-primary-light: #e08b6f;
+  --ifm-color-primary-lighter: #e6a08c;
+  --ifm-color-primary-lightest: #f0c4b3;
+
+  --ifm-background-color: #FAF8F4;
+  --ifm-font-color-base: #151210;
+  --ifm-navbar-background-color: #FAF8F4;
+  --ifm-footer-background-color: #FAF8F4;
+  --ifm-border-color: #E1D8CE;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-weight: 600;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(218, 119, 86, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #e08b6f;
+  --ifm-background-color: #151210;
+  --ifm-font-color-base: #f5f0eb;
+  --ifm-navbar-background-color: #1c1816;
+  --ifm-footer-background-color: #1c1816;
+  --ifm-border-color: #2e2825;
+  --docusaurus-highlighted-code-line-bg: rgba(218, 119, 86, 0.15);
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+body {
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────── */
+.navbar {
+  border-bottom: 1px solid var(--ifm-border-color);
+  box-shadow: none;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* ── Doc content ────────────────────────────────────────────── */
+.markdown img {
+  border-radius: 12px;
+  border: 1px solid var(--ifm-border-color);
+  box-shadow: 0 2px 12px rgba(21, 18, 16, 0.06);
+  margin: 1.5rem 0;
+}
+
+.markdown h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-border-color);
+}
+
+/* ── Admonition ─────────────────────────────────────────────── */
+.alert--tip {
+  --ifm-alert-background-color: rgba(218, 119, 86, 0.08);
+  --ifm-alert-border-color: #DA7756;
+}
