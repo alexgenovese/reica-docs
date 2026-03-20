@@ -42,16 +42,26 @@ const config = {
     ],
   ],
 
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap',
+      type: 'text/css',
+    },
+  ],
+
+  scripts: [
+    {
+      src: '/js/reica-logo-font-fallback.js',
+      async: true,
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/reica-social-card.png',
       navbar: {
-        title: 'Reica',
-        logo: {
-          alt: 'Reica Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'reica',
         items: [
           {
             type: 'docSidebar',

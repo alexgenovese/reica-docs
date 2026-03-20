@@ -4,6 +4,27 @@
  * work well for content-centric websites.
  */
 
+/* ── Fonts ───────────────────────────────────────────────────── */
+
+/* Zalando Sans SemiExpanded — cerca il font installato localmente */
+@font-face {
+  font-family: 'Zalando Sans SemiExpanded';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: local('Zalando Sans SemiExpanded'), local('ZalandoSans-SemiExpanded');
+}
+
+/* Wordmark navbar */
+.navbar__brand .navbar__title {
+  font-family: 'Zalando Sans SemiExpanded', 'Inter', system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0;
+  color: inherit;
+}
+
 /* ── Reica Brand Tokens ──────────────────────────────────────── */
 :root {
   --ifm-color-primary: #DA7756;
@@ -19,7 +40,8 @@
   --ifm-navbar-background-color: #FAF8F4;
   --ifm-footer-background-color: #FAF8F4;
   --ifm-border-color: #E1D8CE;
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-base: 'Golos Text', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
   --ifm-heading-font-weight: 600;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(218, 119, 86, 0.1);
@@ -37,11 +59,13 @@
 
 /* ── Typography ─────────────────────────────────────────────── */
 body {
+  font-family: 'Golos Text', system-ui, -apple-system, sans-serif;
   font-feature-settings: 'kern' 1, 'liga' 1;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   letter-spacing: -0.02em;
 }
 
