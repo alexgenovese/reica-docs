@@ -85,5 +85,4 @@ A saved character can be used in:
 ## Related
 
 - [Board guide](/features/board) — use characters in canvas compositions
-- [Still Life guide](/features/still-life) — on-model product photography
-- [Use Cases](/use-cases) — see how consistent characters power real campaigns
+- [Generate](/catalog/generate) — on-model photos of your products

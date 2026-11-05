@@ -20,6 +20,8 @@ Review is a step of the work, not a page of the menu. It opens from:
 
 ## The three panes
 
+![Review: the queue on the left, the photo and the image side by side, the quality check and the decision on the right](/img/catalog/review.jpg)
+
 - **Queue**, on the left: the images by product, or **Lowest score first**. Show only those **To review**, or all.
 - **Stage**, in the middle: the image as large as the screen allows, side by side with the photo, with a slider, on its own, or the photo alone. Zoom in to check prints and seams.
 - **Details and decision**, on the right: Approve and Reject, the quality check, Request changes and More.

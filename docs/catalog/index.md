@@ -18,6 +18,8 @@ The work always follows the same five steps.
 | 4. [Review](/catalog/review) | Look at each image next to the photo, approve it, reject it or ask for a change. | Review |
 | 5. [Export](/catalog/export) | Download the approved images as a ZIP, one file per size, or send them to Google Drive. | Review, batch page, product page |
 
+![Home in Reica: what needs attention, recent batches and recently updated products](/img/catalog/home.jpg)
+
 ## The words Reica uses
 
 - **Product**: one item you sell, with its SKU and its photos. Sizes of the same item are variants of one product, not separate products.

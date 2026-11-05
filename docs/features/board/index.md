@@ -122,4 +122,3 @@ Here's how a typical campaign Board session looks:
 
 - [Character guide](/features/character) — create reusable characters for your boards
 - [Library guide](/features/library) — manage and upload reference images
-- [Use Cases](/use-cases) — see Board in real brand scenarios

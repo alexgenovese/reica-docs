@@ -9,6 +9,8 @@ You can generate one product from its page, or many products at once in a batch.
 
 ## One product: the product page
 
+![A product page: photos and coverage on the left, still-life and on-model shots in the middle](/img/catalog/product-page.jpg)
+
 The middle of the product page shows **Shots**: what this product has and what it could have, for still life and on-model. Each product starts with Front and Back; the other angles and poses are under **More angles** and **More poses**.
 
 1. Click the shots that are missing. They join **Your images** on the right.
@@ -37,11 +39,15 @@ Pick products from your folders, seasons and collections (**+** adds a whole fol
 
 ### 2. Brand profile
 
+![The brand profile step of a new batch, with the products table](/img/catalog/batch-profile.jpg)
+
 Pick the profile. Every product gets the same shots, and a summary shows what they will be: angles, background, light, shadow, margin, format, quality, poses and the quality threshold. You can change the on-model outfits for this batch only.
 
 The table lists each product with its category, coverage and shots. A product that cannot be made yet says why: no front photo, no category, already generating, its angles already approved, or its on-model shots waiting for an approved front.
 
 ### 3. Delivery and start
+
+![The last step of a new batch: quality, Fast or Standard, and the summary with the credits](/img/catalog/batch-delivery.jpg)
 
 **Quality of the still lifes**: 1K for the shop, 2K for zoom, 4K for print and campaigns. On-model shots are always 1K.
 
@@ -63,6 +69,8 @@ The summary shows the shots, the delivery, the credits and your balance after. C
 Credits are taken as each image starts, and returned for any image that fails.
 
 ### The batch page
+
+![A finished batch with its counters and the Quality check panel listing two shots to fix](/img/catalog/batch-page.jpg)
 
 The batch page shows how far it is: done, to review, approved, not done, shots under the threshold and credits (with what was refunded). Products that need attention come first.
 

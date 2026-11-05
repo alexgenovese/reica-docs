@@ -25,6 +25,8 @@ Reica removes everything that is not the product: the hanger, the table, the wal
 
 In **Products**, choose **Add products**. The sheet has three steps.
 
+![The Add products sheet with the drop area and the photo guidelines](/img/catalog/add-products.jpg)
+
 ### 1. Photos
 
 Drop photos, choose them, take one with your phone camera, or paste the address of an image or a product page. Up to 200 photos at a time, in JPG, PNG or WebP, up to 15 MB each.
@@ -57,6 +59,8 @@ Pick a season and a collection if you use them, then **Add products**. When they
 
 In **Products**, choose **Import feed** and paste the address of your feed or your store. Reica recognises the format:
 
+![The Import products dialog](/img/catalog/import-feed.jpg)
+
 | Format | Notes |
 | --- | --- |
 | Google Shopping | The feed you already send to Google Merchant Center |
@@ -83,6 +87,8 @@ Google Drive is connected once in **Settings**, under Integrations.
 The first time you import from Google Drive, and every time you import a feed or paste an address, Reica asks you to confirm that you have the rights to the photos and the consent of any people in them, and that you accept the Terms.
 
 ## After adding: the product page
+
+![Products in a grid: each card with its name, category, SKU and status](/img/catalog/products.jpg)
 
 Each product has its page with:
 

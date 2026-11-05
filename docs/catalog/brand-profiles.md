@@ -9,6 +9,8 @@ A brand profile is the look of your catalog, decided once. Every product generat
 
 Open **Brand profiles** in the sidebar, then **New profile** or **Edit**.
 
+![The brand profile editor: Still life with Match the look of a photo, the angles and the still-life setup](/img/catalog/brand-profile.jpg)
+
 ## Match the look of a photo
 
 The quickest start: in the Still life section, choose **Choose a photo** and give Reica a catalog photo whose look you like, yours or a reference. In a few seconds it reads the background, shadow, reflection, light, angle, format and margin, and fills them in.

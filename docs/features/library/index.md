@@ -90,6 +90,5 @@ You don't have to leave your workflow to use the Library:
 
 ## Related
 
-- [History guide](/features/history) — filter and review all past generations with full details
 - [Board guide](/features/board) — use Library assets directly in canvas compositions
-- [Still Life guide](/features/still-life) — upload products for product photography
+- [Add products](/catalog/add-products) — bring your products and their photos into Reica
