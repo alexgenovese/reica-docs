@@ -1,0 +1,129 @@
+/* Introduction blocks, on the light table. */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .features { grid-template-columns: minmax(0, 1fr); }
+}
+
+.feature,
+.door {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1rem 1rem 1.25rem;
+  border: 1px solid var(--reica-hairline);
+  border-radius: 6px;
+  color: var(--reica-ink);
+  transition: border-color 100ms;
+}
+
+.feature:hover,
+.door:hover {
+  border-color: var(--reica-control);
+  color: var(--reica-ink);
+  text-decoration: none;
+}
+
+.feature > b,
+.door > b {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 0.5rem;
+}
+
+.feature > p,
+.door > p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--reica-grey);
+}
+
+.art {
+  height: 9.5rem;
+  border-radius: 4px;
+  background: var(--reica-well);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+/* Photos → still life */
+.artWells { display: flex; align-items: center; gap: 0.75rem; height: 100%; }
+.miniWell { height: 100%; aspect-ratio: 2 / 3; border-radius: 4px; overflow: hidden; background: var(--reica-paper); }
+.miniWell img { width: 100%; height: 100%; object-fit: cover; margin: 0; display: block; }
+.arrow { color: var(--reica-grey); font-size: 1.25rem; }
+
+/* Look */
+.artLook { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; max-width: 16rem; }
+.swatches { display: flex; gap: 0.375rem; }
+.swatches span { width: 1.625rem; height: 1.625rem; border-radius: 4px; border: 1px solid var(--reica-control); }
+.swatches .swatchOn { outline: 2px solid var(--reica-select); outline-offset: 2px; }
+.rows { display: flex; flex-direction: column; background: var(--reica-paper); border: 1px solid var(--reica-hairline); border-radius: 6px; }
+.rows span { display: flex; justify-content: space-between; gap: 1rem; padding: 0.3rem 0.625rem; font-size: 0.8125rem; color: var(--reica-grey); }
+.rows span + span { border-top: 1px solid var(--reica-hairline); }
+.rows b { color: var(--reica-ink); font-weight: 500; }
+
+/* Scale */
+.artScale { display: flex; align-items: center; gap: 1rem; }
+.artScale p { margin: 0; max-width: 12rem; font-size: 0.8125rem; line-height: 1.45; color: var(--reica-grey); }
+
+/* Checks */
+.artChecks { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 1.25rem; align-items: center; font-size: 0.8125rem; }
+.scoreBig { grid-row: span 2; font-size: 3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.scoreBig span { font-size: 1rem; color: var(--reica-grey); font-weight: 500; }
+.artChecks ul { list-style: none; padding: 0; margin: 0.375rem 0 0; display: flex; flex-direction: column; gap: 0.125rem; }
+.artChecks li { margin: 0; }
+
+/* Decide */
+.artDecide { display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+.versions { display: flex; gap: 0.5rem; }
+.versions span { display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.25rem 0.625rem; border-radius: 6px; background: var(--reica-paper); border: 1px solid var(--reica-hairline); font-size: 0.8125rem; font-variant-numeric: tabular-nums; }
+.versions .vOn { border-color: var(--reica-select); box-shadow: 0 0 0 1px var(--reica-select); }
+.vDotOk, .vDotReview { width: 0.5rem; height: 0.5rem; border-radius: 2px; }
+.vDotOk { background: var(--reica-approved); }
+.vDotReview { background: var(--reica-review); }
+.buttons { display: flex; gap: 0.5rem; }
+.btnOutline, .btnInk { display: inline-flex; align-items: center; gap: 0.5rem; height: 2.25rem; padding: 0 0.875rem; border-radius: 6px; font-size: 0.875rem; font-weight: 500; }
+.btnOutline { background: var(--reica-paper); border: 1px solid var(--reica-control); }
+.btnInk { background: var(--reica-ink); color: var(--reica-paper); }
+.buttons kbd { font-size: 0.6875rem; padding: 0 0.3rem; background: transparent; border-color: currentColor; opacity: 0.6; }
+
+/* Files */
+.artFiles { width: 100%; max-width: 16rem; background: var(--reica-paper); border: 1px solid var(--reica-hairline); border-radius: 6px; font-size: 0.8125rem; }
+.artFiles code { display: block; padding: 0.375rem 0.625rem; background: var(--reica-hover); border: 0; border-bottom: 1px solid var(--reica-hairline); border-radius: 6px 6px 0 0; font-size: 0.75rem; }
+.artFiles ul { list-style: none; margin: 0; padding: 0.375rem 0.625rem; display: flex; flex-direction: column; gap: 0.125rem; font-family: var(--ifm-font-family-monospace); font-size: 0.75rem; color: var(--reica-ink); }
+.artFiles li { margin: 0; }
+.artFiles .manifest { color: var(--reica-select); }
+
+/* Roles */
+.roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--reica-hairline); margin-top: 1rem; }
+@media (max-width: 720px) { .roles { grid-template-columns: minmax(0, 1fr); } }
+.roles > div { padding: 1rem 1rem 0.5rem 0; }
+.roles > div + div { border-left: 1px solid var(--reica-hairline); padding-left: 1rem; }
+@media (max-width: 720px) { .roles > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--reica-hairline); } }
+.roles b { font-weight: 600; }
+.roles p { margin: 0.25rem 0 0; font-size: 0.9375rem; line-height: 1.5; color: var(--reica-grey); }
+
+/* Doors */
+.doors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1rem; }
+@media (max-width: 720px) { .doors { grid-template-columns: minmax(0, 1fr); } }
+.door { padding: 1.25rem; }
+.door b { margin-top: 0; }
+.kicker { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--reica-grey); }
+.more { margin-top: 0.5rem; font-size: 0.875rem; font-weight: 500; }
+.more::after { content: ' \2192'; }
+.door:hover .more { color: var(--reica-select); }
+
+.rows span { line-height: 1.4; align-items: baseline; }
+.rows b { font-size: 0.8125rem; line-height: 1.4; }
+.art { line-height: 1.4; }

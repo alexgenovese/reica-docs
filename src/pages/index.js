@@ -2,6 +2,7 @@ import React from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import BrandMark from '@site/src/components/BrandMark';
+import Pipeline from '@site/src/components/Pipeline';
 import styles from './index.module.css';
 
 const STEPS = [
@@ -26,46 +27,6 @@ const DOORS = [
   { kicker: 'Setting up a catalog', title: 'How the catalog works', text: 'The five steps, the words Reica uses, and what a shot goes through.', to: '/catalog' },
   { kicker: 'Buying for a team', title: 'Trust and compliance', text: 'Rights to your photos, AI Act marking on every file, privacy and deletion.', to: '/compliance' },
 ];
-
-function Pipeline() {
-  return (
-    <div className={styles.pipe} aria-label="A product going from a shop photo to approved catalog images">
-      <div className={styles.pipeHead}>
-        <b>Cut-out knit dress</b>
-        <span className={styles.sku}>SKU DR-2291</span>
-        <span className={`state state--approved ${styles.pipeState}`}>3 of 3 approved</span>
-      </div>
-      <div className={styles.pipeBody}>
-        <figure className={styles.frame}>
-          <div className={`${styles.well} ${styles.scanWell}`}>
-            <img src="/img/brand/hanger.webp" alt="Green knit dress on a hanger, a phone photo" />
-            <span className={styles.scan} aria-hidden="true" />
-            <span className={styles.corners} aria-hidden="true"><i /><i /><i /><i /></span>
-          </div>
-          <figcaption><b>Shop photo</b><span>Phone, on a hanger</span></figcaption>
-        </figure>
-        <figure className={`${styles.frame} ${styles.reveal1}`}>
-          <div className={styles.well}>
-            <img src="/img/brand/still-dress.webp" alt="The dress as a front catalog still life" />
-            <span className={styles.score}><i className={styles.dot} />96/100</span>
-          </div>
-          <figcaption><b>Still life</b><span>Front</span></figcaption>
-        </figure>
-        <figure className={`${styles.frame} ${styles.reveal2}`}>
-          <div className={styles.well}>
-            <img src="/img/brand/onmodel.webp" alt="The dress worn by a model, full length" />
-            <span className={styles.pill}>Mid-thigh</span>
-          </div>
-          <figcaption><b>On-model</b><span>Valentina</span></figcaption>
-        </figure>
-      </div>
-      <div className={styles.pipeFoot}>
-        <span>Approved, ready to export</span>
-        <div className={styles.fila} aria-hidden="true"><span /></div>
-      </div>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
