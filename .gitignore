@@ -18,3 +18,5 @@ yarn-error.log*
 .docusaurus
 _images-compressed/
 _images
+.vercel
+.env*
