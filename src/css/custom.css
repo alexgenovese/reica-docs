@@ -333,3 +333,24 @@ a {
     transition: none !important;
   }
 }
+
+/* ── Brand mark (dot catalog) ───────────────────────────────── */
+
+.brand-mark .bm-i { fill: var(--reica-ink); }
+.brand-mark .bm-g { fill: var(--reica-ink); opacity: 0.1; }
+.brand-mark .bm-a { fill: var(--reica-select); }
+[data-theme='dark'] .brand-mark .bm-g { opacity: 0.16; }
+
+/* Condensa: the dress composes cell by cell, the blue cell lands last and blinks. */
+.brand-mark--condense rect { opacity: 0; animation: bm-in 160ms ease-out forwards; }
+.brand-mark--condense .bm-g { animation-name: bm-in-ghost; }
+.brand-mark--condense .bm-a { animation-name: bm-in, bm-blink; animation-duration: 160ms, 900ms; animation-delay: 1.9s, 2.1s; }
+
+@keyframes bm-in { to { opacity: 1; } }
+@keyframes bm-in-ghost { to { opacity: 0.1; } }
+@keyframes bm-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark--condense rect { animation: none; opacity: 1; }
+  .brand-mark--condense .bm-g { opacity: 0.1; }
+}

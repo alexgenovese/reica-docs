@@ -2,7 +2,7 @@
 title: Welcome to Reica
 description: Reica turns your product photos into approved catalog images - still lifes and on-model photos, checked against your photo, reviewed and exported.
 sidebar_position: 1
-slug: /
+slug: /introduction
 ---
 
 # Welcome to Reica
