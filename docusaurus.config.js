@@ -17,6 +17,11 @@ const config = {
   projectName: 'reica-docs',
 
   onBrokenLinks: 'warn',
+
+  customFields: {
+    // Public Cloudflare Turnstile site key for the support form (the secret stays on the server).
+    turnstileSiteKey: process.env.TURNSTILE_SITE_KEY || '',
+  },
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {

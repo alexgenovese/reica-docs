@@ -1,15 +1,15 @@
 ---
 title: Support
-description: How to get help with Reica - check the status page and the docs, then write to support with the request type that fits.
+description: How to get help with Reica - check the status page and the docs, then send a request to the Reica team.
 ---
 
-import { RequestTypes } from '@site/src/components/Support';
+import { SupportForm } from '@site/src/components/Support';
 
 # Support
 
-Write to us by email. Choose the kind of request below: it opens an email to **support@getreica.com** with a short template, so we have what we need to answer you at the first reply.
+Choose the kind of request, tell us what you need, and send it. A person on the Reica team answers by email.
 
-<RequestTypes />
+<SupportForm />
 
 ## Before you write
 
@@ -20,17 +20,15 @@ Write to us by email. Choose the kind of request below: it opens an email to **s
 
 ## What to include
 
-The templates ask for it, but in short:
-
 - the **SKU**, the **shot** and the **version** when it is about an image;
 - a **link** to the product, the batch or the shot in Review (copy it from the address bar);
-- a **screenshot** of what you see;
-- for billing or data requests, the **email of the account**.
+- for billing or data requests, the **email of the account**;
+- a **screenshot** helps: reply to the confirmation email with it attached.
 
 Never send passwords or payment card numbers. Reica will never ask for them.
 
 ## What happens next
 
-You get an answer by email from a person on the Reica team, on working days. On the Pro plan your requests have priority. If a problem affects many accounts, we post it on the [status page](https://status.getreica.com) and update it until it is solved.
+You receive a confirmation by email at once, then an answer from a person on the Reica team, on working days. On the Pro plan your requests have priority. If a problem affects many accounts, we post it on the [status page](https://status.getreica.com) and update it until it is solved.
 
 For a request about personal data, such as a copy or a deletion, we confirm that the request comes from the account holder before acting. See [Trust and compliance](/compliance#privacy-and-the-gdpr).
