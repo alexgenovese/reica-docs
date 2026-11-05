@@ -44,6 +44,8 @@ When an image is close but not right, change it instead of starting again.
 2. Add a general note, or use a quick one: Too dark, Too bright, Wrong colour, Keep the print sharp, Straighten the garment, Smooth the wrinkles. Tick **Remove the drop shadow** if needed.
 3. Choose **Regenerate**. The new version edits the current image with your notes and comes back to review.
 
+![Request changes in Review: quick notes, your own note, Remove the drop shadow and Regenerate](/img/catalog/request-changes.jpg)
+
 **Fix the detected defects** (<kbd>F</kbd>) fills in the request with what the quality check found.
 
 To change light, colour or crop by hand, **Open in editor** (<kbd>E</kbd>). What you save there is a new version to review.

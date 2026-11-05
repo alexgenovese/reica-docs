@@ -33,6 +33,8 @@ Some shops load images per variant. Under **More ways to export the approved sho
 
 ## Send to Google Drive
 
+Included in the Growth and Pro plans.
+
 - From a **batch** or **Review**, **Send to Google Drive** sends the approved images.
 - From a **product page**, you choose the images: the approved ones are selected, and you can include those still to review.
 

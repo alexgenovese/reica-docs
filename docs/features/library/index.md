@@ -1,94 +1,63 @@
 ---
 title: Library
-description: The Reica Library is your central asset manager — upload, organise and access all your reference images, products and generated outputs in one place.
-sidebar_position: 5
+description: Every image you upload and generate, in folders by season and collection, with search, filters, bulk actions and the Trash.
 ---
 
 # Library
 
-The Library is Reica's asset hub. Every product image, reference photo, and generated output lives here — organised in folders, accessible from anywhere in the platform.
+The Library holds everything you upload and generate: catalog shots, uploads and other images. It is built for a season's work, thousands of photos and images, so you can find, move, download and remove them in bulk.
 
----
+![The Library: the folder panel on the left, filters by kind and state, and the grid of images](/img/catalog/library.jpg)
 
-## Library layout
+## Find an image
 
-The Library uses a **split-screen layout**: folders and organisation on the left, recent generations on the right.
+- **Search** by file name, SKU or product name.
+- **Kind**: All, Catalog shots, Uploads, Other. Each shows how many it holds.
+- **State**: To review, Approved, Rejected.
+- **Dates**: from and to.
+- **Grid** or **By product**, which groups catalog shots under their product.
+- **Sort**: newest or oldest first.
 
-![Library split view — folders on the left, recent generations on the right](./images/library-split-view.png)
+The grid loads as you scroll, so a Library of tens of thousands of items stays fast.
 
-- **Left side** — your folder tree. Create, rename, and move folders. Drag images between folders.
-- **Right side** — all recent generations, automatically saved here. Scroll to find any output.
+## Folders
 
----
+Folders follow how a catalog team works: a season, then its collections, for example "FW26 / Denim". They can go four levels deep.
 
-## Creating folders
+- The **folder panel** on the left shows All items, Not in a folder, and your folders with their counts, subfolders included.
+- On each folder: **New subfolder**, **Rename**, **Move to…** and **Delete folder**.
+- Deleting a folder moves its images and subfolders up one level. They go to the Trash only if you choose so.
+- **Find a folder** searches by name or path, such as "ss27 / res".
+- Drag images onto a folder to move them there.
+- **Include subfolders** shows the images of the folders inside the one you opened.
 
-Click **New Folder** to add a folder at any level of your organisation.
+## Select and act in bulk
 
-![Creating a new folder in the Reica Library](./images/library-create-folder.png)
+Choose **Select**, or **Select shown** for everything the filters show, then move the images to a folder, move them to the Trash, or export the approved ones as ZIP files.
 
-You can create as many nested folders as you need. Suggested structure for most brands:
+## The details of an image
 
-```
-Library/
-├── Products/
-│   ├── SS26/
-│   └── AW26/
-├── References/
-│   ├── Models/
-│   └── Moods/
-└── Campaigns/
-    ├── Spring Drop/
-    └── Lookbook/
-```
+Click an image to open its details on the right: what it is, its state, where it came from, its folder, and the actions that fit it, such as **Review** for a shot waiting for review, or **Move to trash**.
 
----
+![The details panel of a catalog shot: its state, its folder and Move to trash](/img/catalog/library-details.jpg)
 
-## Uploading images
+## Upload
 
-Click **Upload** to add images to the currently selected folder — or drag and drop directly from your desktop.
+Choose **Upload** and drop your files. Reica uploads them in the background and tells you how many were uploaded, skipped and failed. A file you have already uploaded is skipped, and failed files can be tried again.
 
-![Uploading an image to a folder or the Library](./images/library-upload-image.png)
+Photos for your catalog go through [Add products](/catalog/add-products), which groups them into products. Use the Library upload for anything else: references, campaign images, styling items.
 
-Supported formats: JPEG, PNG, WebP.  
-No size limit — Reica handles high-resolution files.
+The bar at the top shows how much of your plan's storage you use.
 
----
+## The Trash
 
-## Multi-selection
+Generated images are never deleted at once: **Move to trash** keeps them 30 days. Open the **Trash** from the foot of the sidebar, or the Trash folder in the Library while it holds something, to **Restore** an image or **Delete for good**.
 
-Select multiple images at once by clicking the selection mode button (or using Cmd/Ctrl + click on individual images).
+After 30 days the image is deleted, and the shot stays in its place with "Image deleted on" and the date, so your history stays complete.
 
-![Multi-select images to move or delete multiple at once](./images/library-multi-selection.png)
-
-With multiple images selected you can:
-- **Move** to a different folder
-- **Delete** all selected images at once
-- **Add to Board** — drop selected images directly onto a canvas
-- **Use in Batch** — send to a Batch operation
-
----
-
-## Accessing the Library from other features
-
-You don't have to leave your workflow to use the Library:
-
-- **Inside the Board** — click the Library icon in the left sidebar to open a panel without leaving the canvas
-- **Inside Still Life** — click "Choose from Library" to pick any uploaded product
-- **Inside Character** — browse saved characters directly
-
----
-
-## Tips for keeping your Library organised
-
-- **Create folders before uploading** — it's faster than moving files later
-- **Name folders by season or campaign** — you'll thank yourself in 6 months
-- **Use the multi-select** to batch-move new uploads to the right folder immediately
-- **The right panel (recent generations)** is your safety net — everything you generate is always findable here
-
----
+Uploaded files are not generations: removing one deletes it.
 
 ## Related
 
-- [Board guide](/features/board) — use Library assets directly in canvas compositions
-- [Add products](/catalog/add-products) — bring your products and their photos into Reica
+- [Add products](/catalog/add-products): bring your products and their photos into Reica
+- [Export](/catalog/export): download or send the approved images

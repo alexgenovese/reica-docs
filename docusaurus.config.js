@@ -89,14 +89,8 @@ const config = {
               { label: 'Add products', to: '/catalog/add-products' },
               { label: 'Brand profiles', to: '/catalog/brand-profiles' },
               { label: 'Generate', to: '/catalog/generate' },
-              { label: 'Review and export', to: '/catalog/review' },
-            ],
-          },
-          {
-            title: 'Creative tools',
-            items: [
-              { label: 'Board', to: '/features/board' },
-              { label: 'Character', to: '/features/character' },
+              { label: 'Review', to: '/catalog/review' },
+              { label: 'Export', to: '/catalog/export' },
               { label: 'Library', to: '/features/library' },
             ],
           },

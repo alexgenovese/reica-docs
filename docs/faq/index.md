@@ -1,99 +1,84 @@
 ---
 title: FAQ
-description: Frequently asked questions about Reica — the AI Studio for fashion, beauty and lifestyle brands.
-sidebar_position: 8
+description: Answers to common questions about Reica - photos, products, brand profiles, quality, review, export, credits and data.
 ---
 
-# Frequently Asked Questions
+# Frequently asked questions
 
----
+## Photos and products
 
-## Getting started
+### What photos work best?
 
-### Do I need to write prompts to use Reica?
-No. Reica is designed to work with reference images — not text prompts. Upload a product and reference images and the AI composes the result visually.
+A garment on a hanger, flat on a table or on a mannequin, against a plain wall or surface, the whole garment in the frame, sharp, evenly lit, at least 2000 px on the long side. Add the back as a second photo for back views. See the [photo guidelines](/catalog/add-products#before-you-take-the-photos).
 
-### How long does it take to generate a first image?
-Most users get a publication-ready result within 2 minutes of opening Reica for the first time. No setup, no configuration required.
+### Do I need a studio?
 
-### What image formats can I upload?
-JPEG, PNG, and WebP. There's no strict size limit — Reica handles high-resolution files.
+No. Reica removes everything that is not the product: the hanger, the table, the room. A phone photo in good light is enough.
 
----
+### Which file formats can I upload?
 
-## Still Life and product photography
+JPG, PNG and WebP, up to 15 MB each, up to 200 photos at a time.
 
-### What output types are available for product shots?
-- **Ghost mannequin** — garment retains its shape without a visible model
-- **Flat lay** — overhead, surface-based composition
-- **On-model** — with a character or Reica default model
-- **Still life** — product in a contextual scene (accessories, beauty)
+### Can I import my whole catalog?
 
-### Why should I upload both the front and back of a garment?
-The AI uses both sides to understand the garment's full construction — collar, hems, seams, and silhouette. This improves drape accuracy and reduces artefacts, especially for tailored or structured pieces.
+Yes. Import a Google Shopping feed, a Shopify store, or any product XML or CSV, up to 10,000 products at a time. Sizes and colours of one item become variants of one product. See [Import a feed](/catalog/add-products#import-a-feed).
 
-### Can I get a transparent background output?
-Yes. Select **Transparent** as the background option in Still Life. The output is exported with an alpha channel.
+### Which products does Reica support?
 
----
+Reica is made for clothing: T-shirts, tank tops, shirts, sweaters, jackets, blazers, trousers and dresses, as still lifes and on-model photos.
 
-## Characters
+## Images
 
-### Can I use my own model photos as a character reference?
-Yes. Upload any photo as a style reference when creating a character. The AI extracts the visual identity while generating a unique AI character — not a copy of the real person.
+### What is the difference between a still life and an on-model photo?
 
-### How many characters can I save?
-This depends on your plan. Refer to [Pricing](/pricing) for details.
+A still life shows the product alone on your backdrop. An on-model photo shows a model wearing it. On-model photos are made from the approved front still life, so approve the front first.
 
-### Can I use the same character across different generation modes?
-Yes. Saved characters work in Still Life, Board, and Batch operations.
+### How do I keep the same look across the catalog?
 
----
+With a [brand profile](/catalog/brand-profiles): backdrop, light, shadow, format and margin are set once and used for every product. Use a batch to apply it to many products at once.
 
-## Board
+### What if an image is not faithful to my product?
 
-### What's the difference between Still Life and Board?
-- **Still Life** is optimised for **single product shots** with structured settings (output type, lighting, pose)
-- **Board** is a **canvas mode** for composing multi-image campaigns, editorial flows, and complex visual relationships between references
+Every image is checked against your photo and fixed once automatically when it scores under your threshold. In Review you can reject it, or mark the spots to change and regenerate. See [Quality check](/catalog/quality-check) and [Review](/catalog/review).
 
-### Can I invite team members to collaborate on a Board?
-Team collaboration features depend on your plan. Refer to [Pricing](/pricing) for details.
+### What resolution do I get?
 
----
+Still lifes at 1K, 2K or 4K, depending on your plan. On-model photos are made at 1K; an approved one can get a 2K or 4K version.
 
-## Output quality
+### Are the images marked as AI-generated?
 
-### What's the maximum export resolution?
-Up to **4K** (3840 × 2160px equivalent). Higher resolutions deliver print-ready quality.
+Yes. Every downloaded or exported image carries a mark in its file data, and the export manifest states it, as the EU AI Act asks. The mark is not visible in the picture.
 
-### Is the output good enough for print and billboard?
-Yes, when exported at 4K. Reica's models are calibrated for "more real than reality" — premium fashion editorial quality.
+## Review and export
 
-### Can I use generated images commercially?
-Generated images are owned by the account that produced them. Refer to Reica's [Terms of Service](https://getreica.com) for full licensing details.
+### Can I download an image before it is approved?
 
----
+No. Only approved images can be downloaded, exported or sent to Google Drive, so nothing unchecked reaches your shop.
 
-## Library and History
+### How are exported files named?
 
-### Where do my generated images get saved?
-All generated images are automatically saved in **History**. You can also manually add any output to a folder in your **Library**.
+`{SKU}_{shot}.png`, for example `JKT-001_front.png`, with a `manifest.csv` listing each file. See [Export](/catalog/export).
 
-### Is there a storage limit?
-Refer to your plan details at [getreica.com/pricing](https://getreica.com/pricing).
+## Credits and plans
 
----
+### How do credits work?
 
-## Account and billing
-
-### Can I cancel at any time?
-Yes. There is no lock-in. Cancel from your account settings — your access continues until the end of the current billing period.
+Each image costs credits, shown before you start. Credits of an image that fails are returned. See [Pricing](/pricing).
 
 ### Is there a free trial?
-Visit [getreica.com](https://getreica.com) for current trial and onboarding offers.
 
----
+Yes: 14 days and 20 credits, with no card.
 
-## Still have questions?
+### Is the quality check charged?
 
-Contact us through the in-app chat or at [getreica.com](https://getreica.com).
+No. The check, and one automatic fix when an image falls under your threshold, are included in the price of the image.
+
+## Data
+
+### Is the photo I use to match a look kept?
+
+No. Reica reads it and does not store it.
+
+### What happens when I delete an image?
+
+Generated images go to the Trash for 30 days, where you can restore them. After that the image is deleted. Uploaded files are deleted straight away.

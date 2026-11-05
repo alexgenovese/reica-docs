@@ -20,6 +20,7 @@ Reica is paid with credits. Each plan gives you credits every month and sets wha
 | Still life quality | 1K | 1K and 2K | 1K, 2K and 4K |
 | High-resolution versions of approved shots | | 2K | 2K and 4K |
 | Delivery | Fast | Fast and Standard | Fast and Standard |
+| Google Drive import and export | | Yes | Yes |
 | API access | | | Yes |
 | Storage | 2 GB | 10 GB | 50 GB |
 | Support | Email | Email | Priority |

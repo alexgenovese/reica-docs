@@ -21,4 +21,4 @@ Reica turns the photos you take of your products into catalog images for your sh
 
 - **New to Reica?** Make your first approved image: [Getting started](/getting-started).
 - **Setting up a catalog?** Read [How the catalog works](/catalog), then each step in the Catalog section.
-- **Creative work beyond the catalog?** See the Board and Character under Creative tools.
+- **Looking for an image?** Everything you upload and generate is in the [Library](/features/library).

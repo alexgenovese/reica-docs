@@ -62,8 +62,6 @@ On-model photos show a model wearing the product. Choose:
 
 On-model photos are made at 1K. Once one is approved you can make a 2K or 4K version of it.
 
-On-model is for clothing. Bags, shoes and accessories get still lifes.
-
 ## Default outfits
 
 What the model wears with your products, one outfit per category: a top, a bottom, outerwear and footwear, picked from your Library. Reica fills the rest from your own collection. A product's own outfit, or a change made for one batch, always wins.

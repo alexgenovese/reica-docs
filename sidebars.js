@@ -17,16 +17,7 @@ const sidebars = {
         { type: 'doc', id: 'catalog/export', label: 'Export' },
       ],
     },
-    {
-      type: 'category',
-      label: 'Creative tools',
-      collapsed: false,
-      items: [
-        { type: 'doc', id: 'features/board/index', label: 'Board' },
-        { type: 'doc', id: 'features/character/index', label: 'Character' },
-        { type: 'doc', id: 'features/library/index', label: 'Library' },
-      ],
-    },
+    { type: 'doc', id: 'features/library/index', label: 'Library' },
     { type: 'doc', id: 'pricing/index', label: 'Pricing' },
     { type: 'doc', id: 'faq/index', label: 'FAQ' },
   ],

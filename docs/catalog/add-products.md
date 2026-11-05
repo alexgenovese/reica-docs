@@ -80,7 +80,7 @@ To try Reica without your own feed, choose **Use sample feed**.
 
 In **Add products**, choose **Import from Google Drive** and pick up to 200 photos. Reica can group them by file name, make one product per Drive folder, or one product per photo. It copies each photo and checks it like an upload. A photo already imported is not imported again, and you can close the window while the import goes on.
 
-Google Drive is connected once in **Settings**, under Integrations.
+Google Drive is connected once in **Settings**, under Integrations, and is included in the Growth and Pro plans.
 
 ## Your rights to the photos
 
