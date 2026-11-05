@@ -1,101 +1,335 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Reica docs on the app's "light table" (reica-twopointzero/DESIGN.md):
+ * zero-saturation greys, ink for text and primary actions, selection blue for links and focus,
+ * colour only for state. One family, Instrument Sans, self-hosted.
  */
 
-/* ── Fonts ───────────────────────────────────────────────────── */
+/* ── Font ───────────────────────────────────────────────────── */
 
-/* Zalando Sans SemiExpanded — cerca il font installato localmente */
 @font-face {
-  font-family: 'Zalando Sans SemiExpanded';
+  font-family: 'Instrument Sans';
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: local('Zalando Sans SemiExpanded'), local('ZalandoSans-SemiExpanded');
+  src: url('/fonts/InstrumentSans-Latin.woff2') format('woff2');
 }
 
-/* Wordmark navbar */
-.navbar__brand .navbar__title {
-  font-family: 'Zalando Sans SemiExpanded', 'Inter', system-ui, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-transform: lowercase;
-  letter-spacing: 0;
-  color: inherit;
+@font-face {
+  font-family: 'Instrument Sans';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/InstrumentSans-Latin-Italic.woff2') format('woff2');
 }
 
-/* ── Reica Brand Tokens ──────────────────────────────────────── */
+/* ── Tokens ─────────────────────────────────────────────────── */
+
 :root {
-  --ifm-color-primary: #DA7756;
-  --ifm-color-primary-dark: #cf6540;
-  --ifm-color-primary-darker: #c45a32;
-  --ifm-color-primary-darkest: #a34826;
-  --ifm-color-primary-light: #e08b6f;
-  --ifm-color-primary-lighter: #e6a08c;
-  --ifm-color-primary-lightest: #f0c4b3;
+  --reica-paper: #ffffff;
+  --reica-well: #ebebeb;
+  --reica-hover: #f4f4f4;
+  --reica-hairline: #e4e4e4;
+  --reica-control: #d4d4d4;
+  --reica-grey: #767676;
+  --reica-ink: #171717;
+  --reica-select: #1e5bd7;
+  --reica-review: #b45309;
+  --reica-approved: #15803d;
+  --reica-rejected: #b91c1c;
 
-  --ifm-background-color: #FAF8F4;
-  --ifm-font-color-base: #151210;
-  --ifm-navbar-background-color: #FAF8F4;
-  --ifm-footer-background-color: #FAF8F4;
-  --ifm-border-color: #E1D8CE;
-  --ifm-font-family-base: 'Golos Text', system-ui, -apple-system, sans-serif;
-  --ifm-font-family-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  --ifm-color-primary: var(--reica-select);
+  --ifm-color-primary-dark: #1b52c2;
+  --ifm-color-primary-darker: #194db7;
+  --ifm-color-primary-darkest: #153f97;
+  --ifm-color-primary-light: #2b67e0;
+  --ifm-color-primary-lighter: #376fe2;
+  --ifm-color-primary-lightest: #5a88e7;
+
+  --ifm-background-color: var(--reica-paper);
+  --ifm-background-surface-color: var(--reica-paper);
+  --ifm-font-color-base: var(--reica-ink);
+  --ifm-heading-color: var(--reica-ink);
+  --ifm-color-content-secondary: var(--reica-grey);
+  --ifm-navbar-background-color: var(--reica-paper);
+  --ifm-footer-background-color: var(--reica-paper);
+  --ifm-toc-border-color: var(--reica-hairline);
+  --ifm-color-emphasis-200: var(--reica-hairline);
+  --ifm-color-emphasis-300: var(--reica-control);
+  --ifm-hover-overlay: var(--reica-hover);
+  --ifm-menu-color-background-active: var(--reica-hover);
+  --ifm-menu-color-background-hover: var(--reica-hover);
+  --ifm-menu-color-active: var(--reica-ink);
+  --ifm-table-border-color: var(--reica-hairline);
+  --ifm-table-stripe-background: transparent;
+  --ifm-code-background: var(--reica-hover);
+
+  --ifm-font-family-base: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-font-family-monospace: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --ifm-font-size-base: 0.9375rem; /* body 15/22 */
+  --ifm-line-height-base: 1.4667;
   --ifm-heading-font-weight: 600;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(218, 119, 86, 0.1);
+  --ifm-font-weight-bold: 600;
+  --ifm-code-font-size: 90%;
+  --ifm-global-radius: 6px;
+  --ifm-navbar-height: 3.5rem;
+  --ifm-navbar-shadow: none;
+  --ifm-transition-fast: 100ms;
+  --docusaurus-highlighted-code-line-bg: rgba(30, 91, 215, 0.08);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #e08b6f;
-  --ifm-background-color: #151210;
-  --ifm-font-color-base: #f5f0eb;
-  --ifm-navbar-background-color: #1c1816;
-  --ifm-footer-background-color: #1c1816;
-  --ifm-border-color: #2e2825;
-  --docusaurus-highlighted-code-line-bg: rgba(218, 119, 86, 0.15);
+  --reica-paper: #161616;
+  --reica-well: #2a2a2a;
+  --reica-hover: #1f1f1f;
+  --reica-hairline: #2f2f2f;
+  --reica-control: #3a3a3a;
+  --reica-grey: #a3a3a3;
+  --reica-ink: #ededed;
+  --reica-select: #6e9bff;
+  --reica-review: #f59e0b;
+  --reica-approved: #4ade80;
+  --reica-rejected: #f87171;
+
+  --ifm-color-primary: var(--reica-select);
+  --ifm-color-primary-dark: #4f85ff;
+  --ifm-color-primary-darker: #3f7aff;
+  --ifm-color-primary-darkest: #0f58ff;
+  --ifm-color-primary-light: #8db1ff;
+  --ifm-color-primary-lighter: #9dbcff;
+  --ifm-color-primary-lightest: #cbdbff;
+  --docusaurus-highlighted-code-line-bg: rgba(110, 155, 255, 0.12);
 }
 
-/* ── Typography ─────────────────────────────────────────────── */
+/* ── Type ───────────────────────────────────────────────────── */
+
 body {
-  font-family: 'Golos Text', system-ui, -apple-system, sans-serif;
   font-feature-settings: 'kern' 1, 'liga' 1;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  letter-spacing: -0.02em;
-}
-
-/* ── Navbar ─────────────────────────────────────────────────── */
-.navbar {
-  border-bottom: 1px solid var(--ifm-border-color);
-  box-shadow: none;
-}
-
-/* ── Sidebar ────────────────────────────────────────────────── */
-.menu__link--active {
-  font-weight: 600;
-}
-
-/* ── Doc content ────────────────────────────────────────────── */
-.markdown img {
-  border-radius: 12px;
-  border: 1px solid var(--ifm-border-color);
-  box-shadow: 0 2px 12px rgba(21, 18, 16, 0.06);
-  margin: 1.5rem 0;
+.markdown h1,
+h1 {
+  font-size: 1.5rem; /* page 24/30 */
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 .markdown h2 {
-  margin-top: 2.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--ifm-border-color);
+  font-size: 1.125rem; /* section 18/24 */
+  line-height: 1.333;
+  margin-top: 2.25rem;
 }
 
-/* ── Admonition ─────────────────────────────────────────────── */
-.alert--tip {
-  --ifm-alert-background-color: rgba(218, 119, 86, 0.08);
-  --ifm-alert-border-color: #DA7756;
+.markdown h3 {
+  font-size: 0.9375rem;
+  line-height: 1.4667;
+  margin-top: 1.5rem;
+}
+
+.markdown {
+  --ifm-h1-vertical-rhythm-bottom: 1;
+}
+
+.markdown > p:first-of-type {
+  color: var(--reica-grey);
+}
+
+table,
+.markdown table {
+  font-size: 0.875rem; /* ui 14/20 */
+  line-height: 1.4286;
+  font-variant-numeric: tabular-nums;
+}
+
+.markdown table th {
+  font-weight: 600;
+  background: var(--reica-hover);
+}
+
+.markdown table tr {
+  background: transparent;
+}
+
+kbd {
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.8125rem;
+  border: 1px solid var(--reica-control);
+  border-bottom-width: 1px;
+  border-radius: 4px;
+  box-shadow: none;
+  background: var(--reica-paper);
+  padding: 0 0.35rem;
+}
+
+a {
+  transition: color 100ms;
+}
+
+/* ── Navbar: mark + "reica" wordmark ────────────────────────── */
+
+.navbar {
+  border-bottom: 1px solid var(--reica-hairline);
+}
+
+.navbar__logo {
+  height: 1.375rem;
+  margin-right: 0.5rem;
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+}
+
+.navbar__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+
+.menu {
+  font-size: 0.875rem;
+}
+
+.menu__link {
+  border-radius: 6px;
+  padding: 0.3rem 0.625rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: 600;
+  background: var(--reica-hover);
+}
+
+.menu__list-item-collapsible:hover,
+.menu__link:hover {
+  background: var(--reica-hover);
+}
+
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link--sublist {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--reica-grey);
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--reica-hairline) !important;
+}
+
+/* ── Images sit on the light table, never on white ──────────── */
+
+.markdown img {
+  display: block;
+  background: var(--reica-well);
+  border-radius: 4px;
+  border: 0;
+  box-shadow: none;
+  margin: 1.25rem 0;
+}
+
+/* ── Cards, admonitions, code: hairlines, no shadows ────────── */
+
+.alert {
+  --ifm-alert-border-width: 1px;
+  --ifm-alert-border-left-width: 1px;
+  --ifm-alert-background-color: var(--reica-hover);
+  --ifm-alert-background-color-highlight: var(--reica-hairline);
+  --ifm-alert-foreground-color: var(--reica-ink);
+  --ifm-alert-border-color: var(--reica-hairline);
+  box-shadow: none;
+  border-radius: 6px;
+}
+
+.alert [class*='admonitionHeading'] {
+  font-size: 0.8125rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.alert--info,
+.alert--tip,
+.alert--secondary {
+  --ifm-alert-border-color: var(--reica-hairline);
+}
+
+.alert--warning {
+  --ifm-alert-border-color: var(--reica-review);
+}
+
+.alert--danger {
+  --ifm-alert-border-color: var(--reica-rejected);
+}
+
+.alert--success {
+  --ifm-alert-border-color: var(--reica-approved);
+}
+
+.card {
+  border: 1px solid var(--reica-hairline);
+  box-shadow: none;
+}
+
+.theme-code-block {
+  box-shadow: none;
+  border: 1px solid var(--reica-hairline);
+}
+
+.pagination-nav__link {
+  border-color: var(--reica-hairline);
+  border-radius: 6px;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--reica-control);
+}
+
+/* ── State words: a small square swatch plus a word ─────────── */
+
+.state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  white-space: nowrap;
+}
+
+.state::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.state--review { color: var(--reica-review); }
+.state--approved { color: var(--reica-approved); }
+.state--rejected { color: var(--reica-rejected); }
+.state--progress { color: var(--reica-select); }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+
+.footer {
+  border-top: 1px solid var(--reica-hairline);
+  font-size: 0.875rem;
+}
+
+.footer__title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+/* ── Focus ──────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--reica-select);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }

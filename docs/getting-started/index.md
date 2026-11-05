@@ -1,83 +1,46 @@
 ---
-title: Getting Started
-description: Get your first AI-generated image in under 2 minutes with Reica — no prompts, no design skills required.
+title: Getting started
+description: Your first approved catalog image in a few minutes - add a product, generate its front still life, review it and download it.
 sidebar_position: 2
 ---
 
-# Getting Started
+# Getting started
 
-Generate your first publication-ready image in under 2 minutes. No prompt engineering. No design skills required.
+The shortest way to your first approved catalog image: one product, its front still life, review and download.
 
-## Choose your starting point
+## 1. Add a product
 
-Reica has two main generation modes. Pick the one that matches your goal today:
+1. Open **Products** and choose **Add products**.
+2. Drop a photo of a garment: on a hanger, flat on a table or on a mannequin, on a plain background, the whole garment in the frame. Add the back too if you have it.
+3. Go through **Group** (check the SKU) and **Confirm**, then **Add products**.
 
-| Mode | Best for | Start time |
-|---|---|---|
-| **Still Life** | Product photography, flat lay, ghost mannequin | < 1 min |
-| **Board** | Campaign compositions, multi-image looks, editorial | < 2 min |
+Reica makes a thumbnail and detects the category. No credits are used yet.
 
----
+No photo at hand? In **Import feed**, choose **Use sample feed** to get six garments to try with.
 
-## Quick Win: Product Shot in 60 Seconds
+## 2. Check the brand profile
 
-The fastest path from zero to a finished image.
+Your account starts with a brand profile: a white backdrop with front, back and three-quarter views. To make it yours, open **Brand profiles**, choose **Edit** and set the backdrop, light, format and margin. The fastest way is **Match the look of a photo**: give it a catalog photo you like and Reica fills in the settings.
 
-### Step 1 — Open Still Life
+More: [Brand profiles](/catalog/brand-profiles).
 
-From the Home dashboard, click **Still Life** in the shortcuts bar.
+## 3. Generate
 
-![Reica home dashboard with shortcuts](./images/getting-started-home.png)
+Open the product. In **Shots**, the front still life is ready to pick: click it, check the cost in the Generate panel, and choose **Generate**.
 
-### Step 2 — Upload your product
+The shot shows Generating, then **To review** with its quality check score.
 
-Click the upload area and add your product image (JPEG or PNG, any size).
+## 4. Review and approve
 
-- Front view works for most products
-- For apparel: upload both **front and back** to improve generation quality
+Choose **Review**. The image sits next to your photo: zoom in on the print and the seams. If it is right, **Approve** (<kbd>A</kbd>). If something is off, mark the spot, say what to change and **Regenerate**.
 
-### Step 3 — Configure the shot
+More: [Review](/catalog/review).
 
-Set these three options (all have smart defaults — you can skip them on your first try):
+## 5. Download
 
-1. **Output type** — choose Ghost, Flat Lay, On-model, or Still Life
-2. **Background** — pick a color or leave transparent
-3. **Lighting** — studio, natural, dramatic, or soft
+On the product page, the approved shot's menu has **Download PNG**. For many products, use **Export approved** for a ZIP, or **Send to Google Drive**.
 
-### Step 4 — Generate
+## Next
 
-Click **Generate**. Your image is ready in seconds.
-
-### Step 5 — Download or reuse
-
-- Click the image to open it full-size
-- Download in up to **4K resolution**
-- Click **Use for new generation** to build on the result
-
----
-
-## Quick Win: Campaign Board in 2 Minutes
-
-### Step 1 — Create a new Board
-
-From Home, click **New Board**. Give it a name.
-
-### Step 2 — Add a reference image
-
-Drag any reference image onto the canvas — a model photo, a garment flat, a mood image.
-
-### Step 3 — Select and generate
-
-Click the node to select it. Choose a photographic style, then hit **Generate**.
-
-### Step 4 — Link and expand
-
-Use the **+** button on any node to link it to new generations and build a full campaign from a single reference.
-
----
-
-## What's next?
-
-- [How It Works](/how-it-works) — understand the AI logic in plain language
-- [Still Life feature guide](/features/still-life) — master every setting
-- [Board feature guide](/features/board) — build campaign-scale compositions
+- Approved front? Make the on-model photos: they start from it. See [Generate](/catalog/generate).
+- A whole collection? Run a [batch](/catalog/generate#many-products-a-batch).

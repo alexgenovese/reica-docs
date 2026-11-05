@@ -5,8 +5,8 @@
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Reica Docs',
-  tagline: "Your creative process is changing. We're not automating your creativity, we're helping you to rethink it.",
-  favicon: 'img/favicon.ico',
+  tagline: 'Turn your product photos into approved catalog images.',
+  favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
   url: 'https://docs.getreica.com',
@@ -42,26 +42,29 @@ const config = {
     ],
   ],
 
-  stylesheets: [
+  headTags: [
     {
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap',
-      type: 'text/css',
-    },
-  ],
-
-  scripts: [
-    {
-      src: '/js/reica-logo-font-fallback.js',
-      async: true,
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/InstrumentSans-Latin.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
     },
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/reica-social-card.png',
       navbar: {
         title: 'reica',
+        logo: {
+          alt: 'Reica',
+          src: 'img/mark.svg',
+          srcDark: 'img/mark-dark.svg',
+        },
         items: [
           {
             type: 'docSidebar',
@@ -70,8 +73,8 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://getreica.com',
-            label: 'Go to App',
+            href: 'https://app.getreica.com',
+            label: 'Open Reica',
             position: 'right',
           },
         ],
@@ -80,19 +83,20 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Docs',
+            title: 'Catalog',
             items: [
-              { label: 'Getting Started', to: '/getting-started' },
-              { label: 'How It Works', to: '/how-it-works' },
-              { label: 'Use Cases', to: '/use-cases' },
+              { label: 'How the catalog works', to: '/catalog' },
+              { label: 'Add products', to: '/catalog/add-products' },
+              { label: 'Brand profiles', to: '/catalog/brand-profiles' },
+              { label: 'Generate', to: '/catalog/generate' },
+              { label: 'Review and export', to: '/catalog/review' },
             ],
           },
           {
-            title: 'Features',
+            title: 'Creative tools',
             items: [
               { label: 'Board', to: '/features/board' },
               { label: 'Character', to: '/features/character' },
-              { label: 'Still Life', to: '/features/still-life' },
               { label: 'Library', to: '/features/library' },
             ],
           },

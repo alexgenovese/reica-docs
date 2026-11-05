@@ -1,36 +1,24 @@
 ---
 title: Welcome to Reica
-description: Reica is the AI Studio for fashion, beauty and lifestyle brands — rethink your entire creative process with no prompts, perfect character consistency, and batch operations at scale.
+description: Reica turns your product photos into approved catalog images - still lifes and on-model photos, checked against your photo, reviewed and exported.
 sidebar_position: 1
 slug: /
 ---
 
 # Welcome to Reica
 
-**Your creative process is changing. We're not automating your creativity — we're helping you to rethink it.**
+Reica turns the photos you take of your products into catalog images for your shop: a still life of the product alone, and on-model photos of a model wearing it. It is made for the teams who run a fashion catalog, from content managers to studio producers, and who work through hundreds of SKUs a season.
 
-Reica is the AI Studio built exclusively for fashion, beauty and lifestyle brands. Unlike generic AI tools, every feature in Reica is designed for your world: from lookbooks to product shoots, editorial campaigns to e-commerce catalogues.
+## What Reica does
 
-## What makes Reica different
-
-| Feature | What it means for you |
-|---|---|
-| **No Prompt** | Compose with reference images — no writing required |
-| **Same Character, Different Styles** | Perfect model consistency across every shoot |
-| **Vertical AI** | Fashion, beauty and lifestyle native — not retrofitted |
-| **Batch Operations** | Edit thousands of try-ons in a single click |
-| **Consistency Across Medias** | Same look from social content to e-commerce PDP |
-| **More Real Than Reality** | Output so refined it sets a new standard |
+- **Starts from your photos.** A garment on a hanger, a table or a mannequin. Reica removes everything that is not the product.
+- **Keeps one look.** A brand profile fixes the backdrop, light, format and margin once, so every product of the season lines up.
+- **Works at catalog scale.** Generate one product from its page, or hundreds in a batch, with your feed's SKUs and sizes.
+- **Checks every image.** Each image is scored against your photo for print, colour, shape and defects, and fixed once automatically when it falls short.
+- **Lets people decide.** Nothing leaves Reica until someone approves it. Approved images export as a ZIP or go straight to Google Drive.
 
 ## Where to start
 
-- **New to Reica?** → [Get your first result in 2 minutes](/getting-started)
-- **Understand the logic** → [How It Works](/how-it-works)
-- **See real brand scenarios** → [Use Cases](/use-cases)
-- **Explore every tool** → browse the **Features** section in the sidebar
-
----
-
-:::tip First success guarantee
-Most users generate a publication-ready image within their first 2 minutes. No design skills, no prompt engineering — just your references.
-:::
+- **New to Reica?** Make your first approved image: [Getting started](/getting-started).
+- **Setting up a catalog?** Read [How the catalog works](/catalog), then each step in the Catalog section.
+- **Creative work beyond the catalog?** See the Board and Character under Creative tools.
