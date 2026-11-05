@@ -73,6 +73,11 @@ const config = {
             label: 'Documentation',
           },
           {
+            to: '/support',
+            label: 'Support',
+            position: 'right',
+          },
+          {
             href: 'https://app.getreica.com',
             label: 'Open Reica',
             position: 'right',
@@ -100,6 +105,8 @@ const config = {
               { label: 'Trust and compliance', to: '/compliance' },
               { label: 'Pricing', to: '/pricing' },
               { label: 'FAQ', to: '/faq' },
+              { label: 'Support', to: '/support' },
+              { label: 'Status', href: 'https://status.getreica.com' },
               { label: 'getreica.com', href: 'https://getreica.com' },
             ],
           },

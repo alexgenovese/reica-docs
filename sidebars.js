@@ -21,6 +21,7 @@ const sidebars = {
     { type: 'doc', id: 'compliance/index', label: 'Trust and compliance' },
     { type: 'doc', id: 'pricing/index', label: 'Pricing' },
     { type: 'doc', id: 'faq/index', label: 'FAQ' },
+    { type: 'doc', id: 'support/index', label: 'Support' },
   ],
 };
 

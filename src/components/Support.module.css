@@ -1,0 +1,25 @@
+.types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+@media (max-width: 860px) {
+  .types { grid-template-columns: minmax(0, 1fr); }
+}
+
+.sales {
+  background: #121212;
+  border-color: #121212 !important;
+  color: #ededed !important;
+}
+
+.sales > b { color: #ededed; }
+.sales > p { color: #a3a3a3 !important; }
+.sales span { color: #a3a3a3; }
+
+[data-theme='dark'] .sales {
+  background: #0c0c0c;
+  border-color: #2f2f2f !important;
+}
