@@ -12,7 +12,7 @@ const sidebars = {
         { type: 'doc', id: 'catalog/add-products', label: 'Add products' },
         { type: 'doc', id: 'catalog/brand-profiles', label: 'Brand profiles' },
         { type: 'doc', id: 'catalog/generate', label: 'Generate' },
-        { type: 'doc', id: 'catalog/quality-check', label: 'Quality check' },
+        { type: 'doc', id: 'catalog/validation', label: 'Validation' },
         { type: 'doc', id: 'catalog/review', label: 'Review' },
         { type: 'doc', id: 'catalog/export', label: 'Export' },
       ],

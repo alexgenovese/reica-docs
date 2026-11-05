@@ -68,7 +68,7 @@ What the model wears with your products, one outfit per category: a top, a botto
 
 ## Quality check
 
-Every image is scored against the product photo. Choose the threshold: **Flag shots under** 70, 75, 80, 85, 90 or 95. The default, 85, flags anything worth a look; lower it to see only clear problems, raise it to be stricter. An image under the threshold gets one automatic fix and a flag in Review. See [Quality check](/catalog/quality-check).
+Every image is scored against the product photo. Choose the threshold: **Flag shots under** 70, 75, 80, 85, 90 or 95. The default, 85, flags anything worth a look; lower it to see only clear problems, raise it to be stricter. An image under the threshold gets one automatic fix and a flag in Review. See [Validation](/catalog/validation).
 
 ## Cost per product
 

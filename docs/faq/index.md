@@ -39,7 +39,7 @@ With a [brand profile](/catalog/brand-profiles): backdrop, light, shadow, format
 
 ### What if an image is not faithful to my product?
 
-Every image is checked against your photo and fixed once automatically when it scores under your threshold. In Review you can reject it, or mark the spots to change and regenerate. See [Quality check](/catalog/quality-check) and [Review](/catalog/review).
+Every image is checked against your photo and fixed once automatically when it scores under your threshold. In Review you can reject it, or mark the spots to change and regenerate. See [Validation](/catalog/validation) and [Review](/catalog/review).
 
 ### What resolution do I get?
 

@@ -15,7 +15,7 @@ The work always follows the same five steps.
 | 1. [Add products](/catalog/add-products) | Upload photos, import a feed or pick photos from Google Drive. Each product gets its SKU, its photos and a category. | Products |
 | 2. [Set a brand profile](/catalog/brand-profiles) | Decide once how your images look: backdrop, light, shadow, format, margin, angles, model. | Brand profiles |
 | 3. [Generate](/catalog/generate) | One product from its page, or many at once in a batch with one brand profile. | Product page, Batches |
-| 4. [Review](/catalog/review) | Look at each image next to the photo, approve it, reject it or ask for a change. | Review |
+| 4. [Review](/catalog/review) | Every image is [validated](/catalog/validation) against your photo. Look at it next to the photo, approve it, reject it or ask for a change. | Review |
 | 5. [Export](/catalog/export) | Download the approved images as a ZIP, one file per size, or send them to Google Drive. | Review, batch page, product page |
 
 ![Home in Reica: what needs attention, recent batches and recently updated products](/img/catalog/home.jpg)
