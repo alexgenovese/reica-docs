@@ -45,6 +45,8 @@ The instructions Reica writes for catalog work are fixed and reviewed. When a re
 
 ## Privacy and the GDPR
 
+**Where your data is stored.** In Europe: your photos and images in the Netherlands, the database in Switzerland (covered by an EU adequacy decision), the app in Frankfurt and the background jobs in Milan. Some AI processing may run outside these regions when a European endpoint is busy; ask us for the list of processors.
+
 **No tracking in the app.** Reica's app runs no advertising pixels, no session recording and no third-party analytics.
 
 **Your images stay yours.** Your photos and images are stored in your account's own space. Downloads and exports check that the image belongs to you, and refuse anything not approved.
