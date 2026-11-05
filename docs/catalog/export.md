@@ -54,6 +54,6 @@ A `manifest.csv` beside the files lists every file and its folder. A transfer is
 
 On a product page, an approved shot's menu has **Download PNG**. High-resolution versions download from the same menu once made.
 
-Every image downloaded or sent from Reica carries a mark in its file data saying it was generated with AI. It is not visible in the picture.
+Every image downloaded or sent from Reica carries a mark in its file data saying it was generated with AI, as the EU AI Act asks. It is not visible in the picture. See [Trust and compliance](/compliance#ai-act-every-image-is-marked).
 
 During the free trial, downloads carry a light diagonal "Reica trial" mark. The images in Reica stay clean: once your plan is paid, downloads have no mark.

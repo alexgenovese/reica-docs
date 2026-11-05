@@ -18,6 +18,7 @@ const sidebars = {
       ],
     },
     { type: 'doc', id: 'features/library/index', label: 'Library' },
+    { type: 'doc', id: 'compliance/index', label: 'Trust and compliance' },
     { type: 'doc', id: 'pricing/index', label: 'Pricing' },
     { type: 'doc', id: 'faq/index', label: 'FAQ' },
   ],

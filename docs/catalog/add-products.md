@@ -84,7 +84,14 @@ Google Drive is connected once in **Settings**, under Integrations, and is inclu
 
 ## Your rights to the photos
 
-The first time you import from Google Drive, and every time you import a feed or paste an address, Reica asks you to confirm that you have the rights to the photos and the consent of any people in them, and that you accept the Terms.
+Every photo you bring in must be yours to use. When photos arrive without you picking each file, Reica asks you to confirm it with a box that links to the Terms: *"I have the rights to the photos … and the consent of the people in them, and I accept the Terms, including the indemnification."*
+
+- **Google Drive**: once, before the first import, in Settings under Integrations or beside **Import from Google Drive**. The import button stays disabled until the box is ticked.
+- **A feed or a store**: at every import.
+- **A pasted address**: at every use.
+- **Photos you upload by hand**: covered by the Terms you accepted at sign-up.
+
+With it you indemnify Reica against claims about the photos. An import without the confirmation does not start. See [Trust and compliance](/compliance#your-rights-to-the-photos).
 
 ## After adding: the product page
 

@@ -47,7 +47,7 @@ Still lifes at 1K, 2K or 4K, depending on your plan. On-model photos are made at
 
 ### Are the images marked as AI-generated?
 
-Yes. Every downloaded or exported image carries a mark in its file data, and the export manifest states it, as the EU AI Act asks. The mark is not visible in the picture.
+Yes. Every downloaded or exported image carries a mark in its file data, and the export manifest states it, as the EU AI Act asks. The mark is not visible in the picture. See [Trust and compliance](/compliance).
 
 ## Review and export
 
@@ -78,6 +78,18 @@ No. The check, and one automatic fix when an image falls under your threshold, a
 ### Is the photo I use to match a look kept?
 
 No. Reica reads it and does not store it.
+
+### Who is responsible for the rights to my photos?
+
+You are: you confirm that you hold the rights and the consent of the people shown, and you indemnify Reica, when you accept the Terms and again at each import from Google Drive, a feed or an address. See [Your rights to the photos](/compliance#your-rights-to-the-photos).
+
+### Does Reica track me in the app?
+
+No. The app runs no advertising pixels, session recording or third-party analytics.
+
+### Can I have my account and data deleted?
+
+Yes. Reica blocks the account, cancels the subscription, deletes every file and then the account with its data. Invoices are kept as the law requires.
 
 ### What happens when I delete an image?
 

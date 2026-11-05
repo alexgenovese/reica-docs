@@ -97,6 +97,7 @@ const config = {
           {
             title: 'More',
             items: [
+              { label: 'Trust and compliance', to: '/compliance' },
               { label: 'Pricing', to: '/pricing' },
               { label: 'FAQ', to: '/faq' },
               { label: 'getreica.com', href: 'https://getreica.com' },
