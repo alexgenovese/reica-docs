@@ -50,6 +50,24 @@ When an image is close but not right, change it instead of starting again.
 
 To change light, colour or crop by hand, **Open in editor** (<kbd>E</kbd>). What you save there is a new version to review.
 
+## Colour difference (ΔE)
+
+In the editor, an on-model photo shows **Garment colour** with a number that starts with ΔE. It tells you how far the garment's colour in this photo is from the product's colour.
+
+**What it measures.** Reica takes the average colour of the garment's fabric in the photo and compares it with the same garment in the product's approved front still life. The distance is calculated in CIELAB, a colour space built around how the eye sees differences, so the number follows what a person notices, not raw pixel values.
+
+**How to read it.**
+
+| ΔE | What it means |
+| --- | --- |
+| Under 2.3 | No visible difference |
+| 2.3 to under 5 | A close look shows it |
+| 5 or more | A shopper would notice |
+
+The colour comparison needs an approved front still life. Without one the editor shows "Not measured".
+
+**Match the product colour** shifts the garment's colour towards the still life's, on the garment only. The model, her skin, the other clothes and the backdrop stay as they are. Use the **Strength** slider to match partly, or **Undo the match** to go back. For a print or a pattern the average colour is only a guide, so check the details by eye.
+
 ## Versions
 
 Every attempt is kept. The **Versions** strip under the image shows V1, V2 and so on, with their time and score. Click a version to compare it with the current one, or the photo to compare with the original.
