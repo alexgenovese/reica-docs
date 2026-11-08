@@ -33,7 +33,7 @@ The checks run at five moments.
 
 **Proportions are held to the photo.** A still life that comes out longer or shorter than in your photo is corrected: up to a quarter longer, it is brought back to the photo's proportions; beyond that, or shorter, it is made again.
 
-**Length on the body.** For dresses you choose where the hem falls on the model (mid-thigh, knee, mid-calf, ankle) or keep it as in the photo. Without a choice, Reica works the length out from your photo.
+**Length on the body.** For dresses you choose where the hem falls on the model (knee, mid-calf, ankle or floor) or keep it as in the photo. Without a choice, Reica works the length out from your photo.
 
 **On-model starts from an approved product.** An on-model photo is made from the approved front still life, the clean garment, and the other views your photos show. Reica tells the model never to add what no view shows.
 
