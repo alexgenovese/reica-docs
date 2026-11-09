@@ -57,6 +57,8 @@ Every catalog image is compared with your product photo and gets a score out of 
 - **Hem position**: for dresses, where the hem falls on the model compared with the length you chose.
 - **Outfit**: on an on-model photo, each garment you chose for the outfit is checked one by one: worn as chosen, missing, different, outside the frame, or could not be confirmed.
 
+- **The words on the garment**: the text of a label or a print must read as in your photo. See [the words on the garment](#the-words-on-the-garment).
+
 **Each defect** comes with where it is, what is wrong, how to fix it, and how serious it is:
 
 - **Not publishable** caps the score under 60;
@@ -66,6 +68,16 @@ Every catalog image is compared with your product photo and gets a score out of 
 So a faithful product in a flawed image is flagged too, and a high score always means no serious defect was found.
 
 The outfit check is kept apart from the score: a perfect product with the wrong trousers still scores high, and is still flagged.
+
+### The words on the garment
+
+Image models rewrite small text: a brand name in the neck can come out as a different word. Reica reads the words on the garment once from your photo (a neck label, a printed word, a stamp), then, after each still life is made, reads the same places in the image and compares them with your photo.
+
+- **At 1K** a rewritten word is a defect that a shopper would notice, so the score stays under 85 and the image gets its [automatic fix](#4-automatic-fix), which names the text to copy exactly.
+- **On 2K and 4K versions** a version that changes the text is drawn again once; if it still changes it, it is not kept and your credits are refunded.
+- **What is not checked.** Hanging tags, price tags, stickers, barcodes and packaging are not on a catalog image, so they are not checked. Small lines such as size, composition, care and origin count only when they are readable in both your photo and the image; a very short word, such as a size, is skipped.
+- **Add a close-up of the label** to the product (the [label photo](/catalog/add-products#the-label-photo)) and Reica uses it as the reference for the text, and lays the label where you [place it](/catalog/review#place-the-label).
+- Only still lifes are checked: on a model the label is usually hidden or turned.
 
 ## 4. Automatic fix
 

@@ -39,6 +39,20 @@ The export `manifest.csv` repeats the disclosure for each file: "Generated with 
 
 **A visible label** is not required on every AI image: the Act asks for visible disclosure on content that could pass as real. In Social, a visible "Made with AI" label is available on each image, with your own wording, and is off by default. Whether and where to show a visible notice on your shop stays your decision as publisher.
 
+## Verify an image
+
+Anyone with a Reica account can check whether an image was made with Reica: open **Verify image** in the menu, drop the image (JPEG, PNG or WebP, up to 4 MB) or choose it. It is free, with or without a plan, and the image is not stored.
+
+If Reica finds its marking, the result says **Made with Reica** and shows:
+
+- what was found: Content Credentials, the invisible watermark, or both. The watermark stays in the pixels even when the file's data has been removed;
+- whether the image is AI-generated;
+- the date it was created;
+- the signature: "Signed by Reica, intact", or "Signed by Reica, but the image changed after signing";
+- how it was made, in plain steps.
+
+Otherwise it says **No Reica marking found**: the image may not come from Reica, or its markings were removed. Screenshots, crops and some apps that re-save images can remove them. The result never shows who made the image or which product it shows. Each account can check up to 3 images a minute, 20 an hour and 40 a day.
+
 ## Content safety
 
 The instructions Reica writes for catalog work are fixed and reviewed. When a request carries text written by a person, such as your notes, a change request or an outfit note, it passes through the image model's safety filters. A blocked request is stopped, never retried on another model, and its credits are returned.

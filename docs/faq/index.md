@@ -63,11 +63,19 @@ No. Only approved images can be downloaded, exported or sent to Google Drive, so
 
 ### How do credits work?
 
-Each image costs credits, shown before you start. Credits of an image that fails are returned. See [Pricing](/pricing).
+Each image costs credits, shown before you start. Balances and prices can have one decimal, such as 1.5 credits. When a batch starts, Reica sets aside its whole price, pays each image from it, and gives back what was not used. Credits of an image that fails are returned. See [Pricing](/pricing).
 
 ### Is there a free trial?
 
 Yes: 14 days and 20 credits, with no card.
+
+### What is an included edit?
+
+Each plan includes some edits a month: Fix with AI, a note in Review, a quick fix, Length and fit, replacing a garment, or fixing shots at the end of a batch. While you have some left they cost nothing; after that an edit costs the Edit price, shown on the button. See [Pricing](/pricing#edits).
+
+### Why does Reica ask for a photo of the label?
+
+Image models can rewrite the small words on a garment. A close-up of just the label lets Reica keep its text right and lay the label where you choose. See [the label photo](/catalog/add-products#the-label-photo).
 
 ### Is the quality check charged?
 

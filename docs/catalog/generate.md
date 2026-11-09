@@ -66,7 +66,7 @@ Over 50 products, a batch is made as Standard at 1K. Make 2K or 4K versions of t
 
 The summary shows the shots, the delivery, the credits and your balance after. Choose **Start batch**.
 
-Credits are taken as each image starts, and returned for any image that fails.
+When you start, Reica sets aside the whole price of the batch from your balance, so a run never stops half way because the balance ran low meanwhile. Each image is paid from it as it starts. Credits an image did not use go back when the batch ends or is cancelled, and the credits of an image that fails are returned.
 
 ### The batch page
 
@@ -83,4 +83,11 @@ When the batch is finished, a **Quality check** panel lists the images still und
 
 ## High resolution
 
-An approved still life or on-model photo can get a 2K or 4K version for print, zoom and campaigns: from the shot's Download menu or the High resolution section in Review. It is drawn again with finer fabric detail, is ready in about a minute and does not go back to review.
+An approved still life or on-model photo can get a 2K or 4K version for print, zoom and campaigns: from the shot's Download menu or the High resolution section in Review. It is drawn again with finer fabric detail, is ready in about a minute and does not go back to review. Each one is a new image in your Library.
+
+- **From an approved shot.** The shot must be approved first. The 2K comes with the Growth and Pro plans, the 4K with Pro.
+- **The 4K is made from the 2K.** Make the 2K first: the 4K button waits for it ("The 4K is made from the 2K version. Make the 2K first.").
+- **Checked against the approved image.** Reica compares the new version with the approved image. If it drew something else (a different background, a faded garment, a second collar), it tries once more; if that fails too, the version is not kept and your credits are refunded: "The high-resolution version did not match the approved image, so it was not kept. Your credits were refunded."
+- **The words on the garment are checked too.** If the version changes the text on the label, it is refused the same way and refunded. See [Validation](/catalog/validation#the-words-on-the-garment).
+- **The label.** If you [placed the label](/catalog/review#place-the-label), the 2K gets it. **Add the label to the 2K** sews it into the neck as an edit.
+- **Price.** See [Pricing](/pricing#what-things-cost).

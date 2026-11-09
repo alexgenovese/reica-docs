@@ -34,6 +34,8 @@ On a tablet the queue becomes a drawer and the decision sits in a bar at the bot
 - **Reject** (<kbd>R</kbd>): the image will not be used. You can make it again.
 - **Undo** (<kbd>U</kbd>): takes the decision back.
 
+Once you have decided, the two buttons give way to the state of the image, for example **Approved** (or **V2 approved** when you decided on an earlier version), with **Undo** next to it. Undo takes the image back to waiting for review.
+
 In a batch, **Approve all remaining** approves everything else in one go, except images under 85 in the quality check and outfits that need a look: those are left for you.
 
 ## Ask for a change
@@ -49,6 +51,23 @@ When an image is close but not right, change it instead of starting again.
 **Fix the detected defects** (<kbd>F</kbd>) fills in the request with what the quality check found.
 
 To change light, colour or crop by hand, **Open in editor** (<kbd>E</kbd>). What you save there is a new version to review.
+
+**What an edit costs.** A change made by editing the image is an *edit*: Regenerate with your notes or marked spots, Fix with AI and the quick fixes in the editor, the Length and fit panel, replacing a garment, and Fix N shots at the end of a batch. Your plan includes a number of edits each calendar month. While one is left the button says "Included, 7 of 10 left this month"; after that an edit costs the Edit price, shown on the button. Trying again on a shot that failed, and the automatic fix, are not edits. See [Pricing](/pricing#edits).
+
+## Place the label
+
+When a product has a [label photo](/catalog/add-products#the-label-photo), its front still life is made without the label, and you say where it goes. In the side panel, under High resolution, the **Label** section offers **Place the label** (**Move the label** once placed). It is free, and it is offered on the front still life only.
+
+1. Choose **Place the label**. Reica shows the neck, enlarged, with a dashed zone.
+2. Drag the box to where the label sits, inside the neck. Drag its corner to resize it. The box cannot leave the zone.
+3. Or pick a size: **Small**, **Medium** or **Large**, which are 4%, 7% and 10% of the garment's width. Resizing the box by hand makes it your own size.
+4. Choose **Save**.
+
+Reica lays the label you chose, [your photo or the cleaned one](/catalog/add-products#the-label-photo), flat on the image, with the fabric's light and the collar's shadow. This image gets it at once. Saving makes a **new version** that waits for your review. The text on a label is only readable when the label is big enough: under a certain width the dialog says "At this size its text cannot be read, even in 2K."
+
+**On the 2K version.** The 2K is made without the label, and Reica lays it on after the checks, in the same box. In the High resolution section, **Add the label to the 2K** goes further: the label is sewn into the neck, so it follows the fabric. That is an edit, so it uses one of your included edits or costs the Edit price at 2K (see [Pricing](/pricing#edits)). If the sewn label comes out at a different size, Reica keeps the flat label instead and gives the edit back. The 4K is made from the 2K and keeps what it has.
+
+**Changing the image afterwards.** Fix with AI, a note or a quick fix on an image that has the label works on the image without it; when the change is done, Reica puts the label back in the same box, free, as a further version.
 
 ## Colour difference (ΔE)
 
@@ -93,3 +112,5 @@ A three-quarter view can start from the product photos or from the approved fron
 | <kbd>+</kbd> <kbd>−</kbd> <kbd>0</kbd> | Zoom in, zoom out, fit |
 | <kbd>Esc</kbd> | Back to where Review was opened |
 | <kbd>?</kbd> | All shortcuts, anywhere in Reica |
+
+On a wide screen, **Shortcuts** is also a link at the foot of the side panel, out of the way of the decision.
