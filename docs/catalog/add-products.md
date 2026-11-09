@@ -39,7 +39,7 @@ Then choose how photos become products:
 - **One product per photo**: best for a quick batch of front photos.
 
 :::tip Name your files and Reica groups them for you
-`JKT-001_front.jpg`, `JKT-001_back.jpg` and `JKT-001_detail.jpg` become one product, SKU `JKT-001`, with the right photo in each slot. Reica reads `front`, `back`, `side` and `detail` (also `f`, `b`, `s`, `d`, and the Italian `fronte`, `retro`, `lato`, `dettaglio`). Photos without a word take front, back, side and detail in order. Camera names like `IMG_1234` stay separate products.
+`JKT-001_front.jpg`, `JKT-001_back.jpg` and `JKT-001_detail.jpg` become one product, SKU `JKT-001`, with the right photo in each slot. Reica reads `front`, `back`, `side` and `detail` (also `f`, `b`, `s`, `d`, and the Italian `fronte`, `retro`, `lato`, `dettaglio`). A close-up of the label is read from `label`, `labels` or `etichetta` (`JKT-001_label.jpg`), or from two words such as `neck-label` or `neck-tag`; `tag` alone is not a label, because it is usually the hanging tag. Photos without a word take front, back, side and detail in order, and never become a label photo. Camera names like `IMG_1234` stay separate products.
 :::
 
 ### 2. Group
@@ -72,6 +72,8 @@ Up to 10,000 products per import. Before you start, Reica shows how many product
 
 **Sizes become variants.** Rows that share an `item_group_id` (or a parent column in a CSV) become one product, with each size and colour kept as a variant: size, colour, SKU, price and stock. A colour with its own photos is its own product.
 
+**Extra photos named by their file.** An additional photo link whose file name says `back`, `side` or `detail` (or `rear`, `lato`, `dettaglio`) fills that slot. A file name with `label`, `labels`, `etichetta`, `neck-label` or `neck-tag` becomes the product's [label photo](#the-label-photo). Other additional photos are kept as extras.
+
 **Importing again** updates sizes, prices and stock. Names and details are updated only if you tick **Update names and details of products already imported**. Photos, shots and reviews are never touched.
 
 To try Reica without your own feed, choose **Use sample feed**.
@@ -99,8 +101,20 @@ With it you indemnify Reica against claims about the photos. An import without t
 
 Each product has its page with:
 
-- **Photos**: Front (required, every image starts from it), Back, Side and Detail. Drop a photo on a slot, drag to swap. Reica tells you whether the front photo looks good, could be better, or should be retaken. It never blocks you.
+- **Photos**: Front (required, every image starts from it), Back, Side, Detail and Label. Drop a photo on a slot, drag to swap. Reica tells you whether the front photo looks good, could be better, or should be retaken. It never blocks you.
 - **Coverage**: how much of the product your photos show. A side no photo shows will be imagined, and Reica says so before you generate.
 - **SKU details**: name, SKU, category and **Cut for** (Women, Men, Unisex). The category is detected for you; you can change it.
 - **Brand profile**: the profile this product follows.
 - **Variants**: the sizes from your feed.
+
+### The label photo
+
+Image models tend to rewrite the small words on a garment: a brand name in the neck, a printed word. The **Label** slot is for a close-up of just the label, so that its text comes out right. Add one when the garment has readable text on its label.
+
+- **Why.** When the photos show text on a label and there is no label photo, the product page says so: "This product has text on its label. Generated images may not reproduce it exactly. Add a close-up photo of the label to help." The same advice appears in Review when a check finds the text changed.
+- **What Reica does with it.** The label is used on the **front still life** and its 2K and 4K versions. It is never used as a view of the garment's shape.
+- **The cleaned label.** When you add a photo, Reica cuts the label out of its background and, a moment later, draws it again clean and straight, without the cord, the threads or the fabric around it. The slot says "Reica is cleaning the label at high resolution…" while it works. It costs you nothing.
+- **Your choice.** When it is ready the slot shows two cards, **Your photo** and **Cleaned by Reica**. Pick the one Reica lays inside the neck of your still lifes; the enlarge button compares the two side by side. Until you pick, Reica uses the cleaned label. If it could not clean the label, your photo is used as it is.
+- **A text notice.** Reica reads the words on both. If they differ, a notice says by how many characters, for example when the cord hid a word and the clean version completed it. Keep the cleaned label only if it matches the real one.
+
+Where the label goes on the still life is up to you: see [Place the label](/catalog/review#place-the-label).
