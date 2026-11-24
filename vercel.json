@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/api-reference",
+      "headers": [{ "key": "Content-Security-Policy", "value": "connect-src 'self' https://app.getreica.com https://storage.googleapis.com" }]
+    },
+    {
+      "source": "/api-reference/",
+      "headers": [{ "key": "Content-Security-Policy", "value": "connect-src 'self' https://app.getreica.com https://storage.googleapis.com" }]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+.intro {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+}
+
+.intro h1 {
+  margin-bottom: 0.75rem;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.reference {
+  min-height: 70vh;
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.notice {
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
