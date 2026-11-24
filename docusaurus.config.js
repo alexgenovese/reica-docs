@@ -47,6 +47,12 @@ const config = {
     ],
   ],
 
+  customFields: {
+    // The schema the page /api-reference shows (src/pages/api-reference.js). Locally, point it at the app on
+    // localhost:3400 with REICA_API_SCHEMA_URL=http://localhost:3400/api/v1/openapi.json.
+    apiSchemaUrl: process.env.REICA_API_SCHEMA_URL || 'https://app.getreica.com/api/v1/openapi.json',
+  },
+
   headTags: [
     {
       tagName: 'link',
@@ -76,6 +82,11 @@ const config = {
             sidebarId: 'mainSidebar',
             position: 'left',
             label: 'Documentation',
+          },
+          {
+            to: '/api-reference',
+            label: 'API Reference',
+            position: 'left',
           },
           {
             to: '/support',

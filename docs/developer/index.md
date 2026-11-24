@@ -7,7 +7,7 @@ description: Make catalog images from your own systems with the Reica API - keys
 
 The Reica API lets your own systems do what you do in the app: send products, make their catalog images with a brand profile, review them and download the approved ones. It is included in the Pro plan.
 
-The full reference, with every field and an example, is the API reference in the app, at `app.getreica.com/developer/docs`. This page is the short version.
+The full reference, with every field, an example of each request and answer, and a way to try each call with your key, is the [API Reference](/api-reference). This page is the short version.
 
 ## What it does
 

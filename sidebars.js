@@ -19,6 +19,7 @@ const sidebars = {
     },
     { type: 'doc', id: 'features/library/index', label: 'Library' },
     { type: 'doc', id: 'developer/index', label: 'Developer API' },
+    { type: 'link', href: '/api-reference', label: 'API Reference' },
     { type: 'doc', id: 'compliance/index', label: 'Trust and compliance' },
     { type: 'doc', id: 'pricing/index', label: 'Pricing' },
     { type: 'doc', id: 'faq/index', label: 'FAQ' },
