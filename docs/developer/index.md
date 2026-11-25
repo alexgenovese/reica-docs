@@ -34,7 +34,7 @@ Amounts are credits with one decimal: your balance, the estimate and the credits
 
 ## Limits
 
-Each key may make a number of requests a minute, set by your plan. Every answer carries `X-RateLimit-Limit` and `X-RateLimit-Remaining`. Over the limit the answer is `429` with `Retry-After`, the seconds to wait.
+Your account may make a number of requests a minute, set by your plan and shared by all its API keys: `GET /account` tells you how many. Every answer carries `X-RateLimit-Limit` and `X-RateLimit-Remaining`. Over the limit the answer is `429` with `Retry-After`, the seconds to wait. If Reica cannot count the request, the answer is `503` with `Retry-After`: nothing was started, send it again.
 
 ## Idempotency keys
 
@@ -51,8 +51,19 @@ Instead of asking again and again, let Reica call you. In **Settings** and **Dev
 | `run.completed` | a generation or batch has ended |
 | `import.completed` | a feed import has ended |
 
-Reica sends a `POST` with `{ id, type, createdAt, data }`. `data` holds ids and a status; ask the API for the details. When your server does not answer with a 2xx code within 10 seconds, Reica tries again, up to eight times over about two days. Use `id` to ignore a repeat. The order of events is not guaranteed.
+Reica sends a `POST` with `{ id, type, createdAt, data }`. `data` holds ids and a status; ask the API for the details. When your server does not answer with a 2xx code within 10 seconds, Reica tries again up to seven more times, over about two days. Use `id` to ignore a repeat. The order of events is not guaranteed.
 
 **Check the signature.** Each delivery has the header `Reica-Signature: t=<time>,v1=<signature>`. Make the HMAC-SHA256 of `<time>.<the raw body>` with your endpoint's secret (`whsec_...`, shown once when you make the endpoint), compare it with `v1`, and refuse a time older than five minutes. Compute it on the raw body, before your framework parses it.
 
-Choose **Send test** on an endpoint to receive a signed test event.
+To receive a signed test event, choose **Send test** on an endpoint, or call `POST /webhooks/{id}/test` with your key (the ids come from `GET /webhooks`). The test event has `"type": "ping"` and empty `data`, and the answer tells you what your server replied.
+
+## Test your integration
+
+1. **Check your key** with `GET /account`: it is free and shows your balance and limits.
+2. **Use the [API Reference](/api-reference).** Paste your key and choose **Test Request** on any call. Uploads, products, imports, estimates, reviews, downloads and webhook tests spend no credits.
+3. **Price a run before you start it.** `POST /estimate` takes the same body as `POST /generations` and `POST /batches` and answers the price and the products that would be skipped, without starting anything. On the reference page, those two calls ask you to confirm before they are sent.
+4. **Start small.** Make your first generation with one product and one shot (`shotKeys`), and read it until it is `completed`.
+5. **Test your webhook receiver** with `POST /webhooks/{id}/test`, and check that it verifies `Reica-Signature` on the raw body.
+6. **Retry safely.** Send a request again with the same `Idempotency-Key`: the answer comes back with `Idempotent-Replayed: true`, and nothing runs twice.
+
+There is no sandbox key: every call runs on your account.
