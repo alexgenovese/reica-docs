@@ -18,10 +18,6 @@ const config = {
 
   onBrokenLinks: 'warn',
 
-  customFields: {
-    // Public Cloudflare Turnstile site key for the support form (the secret stays on the server).
-    turnstileSiteKey: process.env.TURNSTILE_SITE_KEY || '',
-  },
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -48,6 +44,8 @@ const config = {
   ],
 
   customFields: {
+    // Public Cloudflare Turnstile site key for the support form (the secret stays on the server).
+    turnstileSiteKey: process.env.TURNSTILE_SITE_KEY || '',
     // The schema the page /api-reference shows (src/pages/api-reference.js). Locally, point it at the app on
     // localhost:3400 with REICA_API_SCHEMA_URL=http://localhost:3400/api/v1/openapi.json.
     apiSchemaUrl: process.env.REICA_API_SCHEMA_URL || 'https://app.getreica.com/api/v1/openapi.json',

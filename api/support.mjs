@@ -1,4 +1,4 @@
-// Support form endpoint (Vercel serverless function, served at /api/support next to the docs).
+// Support form endpoint, served at /api/support by server.mjs next to the docs.
 // The support address lives only in SUPPORT_TO on the server: the page never shows it.
 //
 // Bot protection, in order: honeypot field, time trap, per-IP rate limit, Cloudflare Turnstile.
@@ -105,7 +105,7 @@ export default async function handler(req, res) {
       console.error('[support] Turnstile verification error', err);
       return res.status(502).json({ error: 'Could not verify the request. Try again.' });
     }
-  } else if (process.env.VERCEL_ENV === 'production') {
+  } else if (process.env.NODE_ENV === 'production') {
     console.error('[support] TURNSTILE_SECRET is not set');
     return res.status(503).json({ error: 'The form is not available right now.' });
   }

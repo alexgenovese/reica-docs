@@ -1,0 +1,9 @@
+.env*
+node_modules
+build
+.docusaurus
+.git
+.vercel
+.DS_Store
+_images
+_images-compressed
