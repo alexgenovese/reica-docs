@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -13,6 +14,9 @@ import styles from './api-reference.module.css';
  * Test Request goes straight from the browser to the app, which allows this origin (CORS, reica-twopointzero #317).
  * The key the reader pastes stays in memory: no proxy (Scalar's default sends requests through proxy.scalar.com),
  * no local storage, no telemetry.
+ *
+ * The two calls that spend credits (POST /generations, POST /batches) wait for a confirmation in the page before they
+ * are sent (customFetch); cancelled, Scalar shows a local answer and nothing reaches the app (reica-twopointzero #270).
  */
 const SCALAR_VERSION = '1.76.2';
 
@@ -76,6 +80,61 @@ const THEME_CSS = `
 }
 `;
 
+/** The operations that spend credits: a POST to exactly these paths (not /batches/{id}/cancel or /review). */
+const SPENDING = /\/api\/v1\/(generations|batches)\/?$/;
+
+/** `{ method, path }` when a request spends credits, else null. Scalar passes a Request, or (url, init) in Electron. */
+function spendingCall(input, init) {
+  const method = (init?.method ?? (typeof input === 'object' ? input.method : undefined) ?? 'GET').toUpperCase();
+  if (method !== 'POST') return null;
+  let path;
+  try {
+    path = new URL(typeof input === 'object' ? input.url : String(input), window.location.href).pathname;
+  } catch {
+    return null;
+  }
+  return SPENDING.test(path) ? { method, path: path.replace(/^\/api\/v1/, '') } : null;
+}
+
+/** What Scalar shows when the reader cancels: a local answer in the API's error shape, never sent. */
+const notSent = () => new Response(
+  JSON.stringify({ error: 'Not sent: you cancelled it in the reference. Nothing was charged.', code: 'NOT_SENT' }),
+  { status: 499, statusText: 'Not sent', headers: { 'Content-Type': 'application/json' } },
+);
+
+/** Asks before a call that spends credits; resolves true to send it. */
+function ConfirmSpend({ call, onAnswer }) {
+  const cancel = useRef(null);
+  useEffect(() => {
+    cancel.current?.focus();
+    const onKey = (event) => event.key === 'Escape' && onAnswer(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [onAnswer]);
+  // On <body>, so no container of the page clips it or stacks it under Scalar's client.
+  return createPortal(
+    <div className={styles.backdrop}>
+      <div className={styles.dialog} role="alertdialog" aria-modal="true" aria-labelledby="spend-title" aria-describedby="spend-text">
+        <h2 id="spend-title">This call spends credits</h2>
+        <p id="spend-text">
+          <code>{call.method} {call.path}</code> starts a real run with your key: it holds the run's price from your
+          wallet and makes the images. To see the price first, send the same body to <code>POST /estimate</code>, which
+          is free.
+        </p>
+        <div className={styles.actions}>
+          <button ref={cancel} type="button" className="button button--secondary" onClick={() => onAnswer(false)}>
+            Cancel
+          </button>
+          <button type="button" className="button button--primary" onClick={() => onAnswer(true)}>
+            Send and spend credits
+          </button>
+        </div>
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
 /** Loads the script once per page view; resolves with window.Scalar. */
 function loadScalar(src) {
   if (window.Scalar) return Promise.resolve(window.Scalar);
@@ -94,8 +153,23 @@ function Reference({ schemaUrl }) {
   const { colorMode } = useColorMode();
   const scriptUrl = useBaseUrl(`/vendor/scalar/api-reference-${SCALAR_VERSION}.js`);
   const [failed, setFailed] = useState(false);
+  const [asking, setAsking] = useState(null);
 
   useEffect(() => {
+    // Every request of the page (the schema too) goes through here; only the two spending calls wait for an answer.
+    const customFetch = (input, init) => {
+      const call = spendingCall(input, init);
+      if (!call) return fetch(input, init);
+      return new Promise((resolve) => {
+        setAsking({
+          call,
+          answer: (send) => {
+            setAsking(null);
+            resolve(send ? fetch(input, init) : notSent());
+          },
+        });
+      });
+    };
     let instance;
     let alive = true;
     loadScalar(scriptUrl)
@@ -105,6 +179,7 @@ function Reference({ schemaUrl }) {
           url: schemaUrl,
           // Requests go straight to the app: '' turns off Scalar's default proxy (proxy.scalar.com).
           proxyUrl: '',
+          customFetch,
           telemetry: false,
           persistAuth: false,
           theme: 'none',
@@ -136,7 +211,12 @@ function Reference({ schemaUrl }) {
       </p>
     );
   }
-  return <div ref={mount} className={styles.reference} />;
+  return (
+    <>
+      <div ref={mount} className={styles.reference} />
+      {asking && <ConfirmSpend call={asking.call} onAnswer={asking.answer} />}
+    </>
+  );
 }
 
 export default function ApiReferencePage() {
@@ -153,7 +233,9 @@ export default function ApiReferencePage() {
           Every endpoint of the Reica API, with its fields, an example of each request and answer, and the errors it can
           return. To try a call, paste your API key (<code>reica_live_...</code>, from <b>Settings</b> &gt;{' '}
           <b>Developer</b> in Reica) in the authentication field: it is sent only to <code>app.getreica.com</code> and
-          is not saved. Only <code>POST /generations</code> and <code>POST /batches</code> spend credits. For the flow,
+          is not saved. Only <code>POST /generations</code> and <code>POST /batches</code> spend credits: the page asks
+          before it sends them, and <code>POST /estimate</code> gives their price for free. To check your webhook
+          receiver, send a test event with <code>POST /webhooks/&#123;id&#125;/test</code>. For the flow,
           credits, limits and webhooks in short, read the <a href={useBaseUrl('/developer')}>Developer API</a> guide.
           The schema itself is at <a href={schemaUrl}>openapi.json</a>.
         </p>
